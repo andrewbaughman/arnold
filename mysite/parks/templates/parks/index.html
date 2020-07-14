@@ -1,38 +1,215 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset-"utf-8"></head>
+	<title>
+		Park List	
+	</title>
 <body>
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'mysite/style.css' %}">
+{% block script %}
+	
+	<script src="{% static 'jquery/jquery-3.3.1.min.js' %}"></script>
+	<script src="{% static 'jquery/jquery.validate.min.js' %}"></script>
+	<script src="{% static 'jquery/jquery.autocomplete.js' %}"></script>
+	<script src="{% static 'jquery/waitMe/waitMe.js' %}"></script>
+	<script src="{% static 'jquery-ui/jquery-ui.min.js' %}"></script>
+	
+	<script type="text/javascript" src="{% static '/mysite/parkwidget.js' %}"></script>
+{% endblock %}
 	<input id="back" type="button" value="Back to Main">
 	<div class="content">
 		<h1>List of Parks</h1>
-    	<div class="contentBody">
-			<ul class="names">
-				<li class="names">Park1</li>
-    	    	<li class="names">Park2</li>
-    	    	<li class="names">Park3</li>
-    	    	<li class="names">Park4</li>
-			</ul>
-			<div class="parkinfo">
-				<p id='rank'>Rank: 2</p>
-				<p class='description'>A description of the park. <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempus, odio non malesuada maximus, arcu risus eleifend elit, id auctor ante lacus eget sapien. Maecenas leo nibh, elementum at felis in, porta dictum tellus. Donec felis leo, aliquet sed egestas in, ultricies non enim. Aliquam erat volutpat. </p>
-				<div class = "row">
-					<div class="column"><img src="{% static 'mysite/park1.jpg' %}" style="width: 100%;"></div>
-					<div class="column"><img src="{% static 'mysite/park2.jpg' %}" style="width: 100%;"></div>
-				</div>
-				<div class="rankTime">
-					<p class='rankDesc'>How would you rank it?</p>
-					<ul class="rankRow">
-						<li class='rankCol'>1 Quite Bad</li>
-						<li class='rankCol'>2 Kinda bad</li>
-						<li class='rankCol'>3 'Lil Good</li>
-						<li class='rankCol'>4 Fantastic</li>
-					</ul>
+	</div>
+		<div class="content-container" style="background-color: cadetblue;height: 85vh;border-radius: 10px;width: 95vw;margin: 5vh; display: inline-flex;">
+			<div class="button_list" style="float: left;border-right: 1px solid white;min-width: 10%;min-height: 100%;">
+				<button class="button-styling" id="roseland-btn">Roseland</button>
+				<button class="button-styling" id="garver-btn">Garver</button>
+				<button class="button-styling" id="recreation-btn">Recreation</button>
+				<button class="button-styling" id="eastend-btn">East End</button>
+				<button class="button-styling" id="butterfly-btn">Butterfly</button>
+			</div>
+			<div class="info_panel" style="max-width: 80vw;min-width:80vw;">
+				<div class="info_section" style="height: 100%; width: 100%;">
+					<div id="sample_suggestion">
+						<h2 style="text-align: center;">Click a button to view a park!</h2>
+					</div>
+					<div id="roseland" class="hidden">
+						<div>
+							<div class="park-heading">
+								<h2 style="text-align:center;">Roseland Park</h2>
+							</div>
+							<div class="park-description" style="display:flex;">
+								<div class="park-address park_section">
+									<text>319 E South St, Bryan, OH 43506</text>
+									<div class="park-map">
+										<img src="{% static 'mysite/roselandpark.png' %}" style="width: 60%; margin-top: 1%;">
+									</div>
+								</div>
+								<div class="park-features park_section">
+									<ul>
+										<li>Cool Bridge</li>
+										<li>Neat Sign</li>
+										<li>Basketball Court</li>
+										<li>Trees</li>
+									</ul>
+								</div>
+								<div class="park-rating park_section">
+									<button class="vote-button"> 1 </button><br>
+									<button class="vote-button"> 2 </button><br>
+									<button class="vote-button"> 3 </button><br>
+									<button class="vote-button"> 4 </button><br>
+									<button class="vote-button"> 5 </button><br>
+								</div>
+							</div>
+							<div class="park-pictures" style="text-align:center;">
+								{LOOK AT ALL THESE PICTURES}
+							</div>
+						</div>
+					</div>
+					<div id="garver" class="hidden">
+						<div>
+							<div class="park-heading">
+								<h2 style="text-align:center;">Garver Park</h2>
+							</div>
+							<div class="park-description" style="display:flex;">
+								<div class="park-address park_section">
+									<text>127C Blakeslee Ave, Bryan, OH 43506</text>
+									<div class="park-map">
+										<img src="{% static 'mysite/garverpark.png' %}" style="width: 60%; margin-top: 1%;">
+									</div>
+								</div>
+								<div class="park-features park_section">
+									<ul>
+										<li>Big</li>
+										<li>Pretty Quiet</li>
+										<li>Paths</li>
+										<li>Pavillion</li>
+										<li>Close Proximity to Hospital</li>
+										<li>Football Field</li>
+										<li>Lots of Benches</li>
+									</ul>
+								</div>
+								<div class="park-rating park_section">
+									<button class="vote-button"> 1 </button><br>
+									<button class="vote-button"> 2 </button><br>
+									<button class="vote-button"> 3 </button><br>
+									<button class="vote-button"> 4 </button><br>
+									<button class="vote-button"> 5 </button><br>
+								</div>
+							</div>
+							<div class="park-pictures" style="text-align:center;">
+								{LOOK AT ALL THESE PICTURES}
+							</div>
+						</div>
+					</div>
+					<div id="recreation" class="hidden">
+						<div>
+							<div class="park-heading">
+								<h2 style="text-align:center;">Recreation Park</h2>
+							</div>
+							<div class="park-description" style="display:flex;">
+								<div class="park-address park_section">
+									<text>540 Newdale Dr, Bryan, OH 43506</text>
+									<div class="park-map">
+										<img src="{% static 'mysite/recreationpark.png' %}" style="width: 60%; margin-top: 1%;">
+									</div>
+								</div>
+								<div class="park-features park_section">
+									<ul>
+										<li>Disc Golf</li>
+										<li>Pool</li>
+										<li>Imagination Station</li>
+										<li>Baseball Diamonds</li>
+										<li>Ice Rink</li>
+										<li>Connected to Moore Park</li>
+										<li>Lots of Benches</li>
+									</ul>
+								</div>
+								<div class="park-rating park_section">
+									<button class="vote-button"> 1 </button><br>
+									<button class="vote-button"> 2 </button><br>
+									<button class="vote-button"> 3 </button><br>
+									<button class="vote-button"> 4 </button><br>
+									<button class="vote-button"> 5 </button><br>
+								</div>
+							</div>
+						</div>
+						<div class="park-pictures" style="text-align:center;">
+							{LOOK AT ALL THESE PICTURES}
+						</div>
+					</div>
+					<div id="eastend" class="hidden">
+						<div>
+							<div class="park-heading">
+								<h2 style="text-align:center;">East End Park</h2>
+							</div>
+							<div class="park-description" style="display:flex;">
+								<div class="park-address park_section">
+									<text>540 Newdale Dr, Bryan, OH 43506</text>
+									<div class="park-map">
+										<img src="{% static 'mysite/recreationpark.png' %}" style="width: 60%; margin-top: 1%;">
+									</div>
+								</div>
+								<div class="park-features park_section">
+									<ul>
+										<li>Disc Golf</li>
+										<li>Pool</li>
+										<li>Imagination Station</li>
+										<li>Baseball Diamonds</li>
+										<li>Ice Rink</li>
+										<li>Connected to Moore Park</li>
+										<li>Lots of Benches</li>
+									</ul>
+								</div>
+								<div class="park-rating park_section">
+									<button class="vote-button"> 1 </button><br>
+									<button class="vote-button"> 2 </button><br>
+									<button class="vote-button"> 3 </button><br>
+									<button class="vote-button"> 4 </button><br>
+									<button class="vote-button"> 5 </button><br>
+								</div>
+							</div>
+						</div>
+						<div class="park-pictures" style="text-align:center;">
+							{LOOK AT ALL THESE PICTURES}
+						</div>
+					</div>
+					<div id="butterfly" class="hidden">
+						<div>
+							<div class="park-heading">
+								<h2 style="text-align:center;">Butterfly Park</h2>
+							</div>
+							<div class="park-description" style="display:flex;">
+								<div class="park-address park_section">
+									<text>540 Newdale Dr, Bryan, OH 43506</text>
+									<div class="park-map">
+										<img src="{% static 'mysite/recreationpark.png' %}" style="width: 60%; margin-top: 1%;">
+									</div>
+								</div>
+								<div class="park-features park_section">
+									<ul>
+										<li>Very Quiet </li>
+										<li>Nature</li>
+									</ul>
+								</div>
+								<div class="park-rating park_section">
+									<button class="vote-button"> 1 </button><br>
+									<button class="vote-button"> 2 </button><br>
+									<button class="vote-button"> 3 </button><br>
+									<button class="vote-button"> 4 </button><br>
+									<button class="vote-button"> 5 </button><br>
+								</div>
+							</div>
+						</div>
+						<div class="park-pictures" style="text-align:center;">
+							{LOOK AT ALL THESE PICTURES}
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
+	
 	
 	<script>
         document.querySelector('#back').onclick = function(e) {
