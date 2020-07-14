@@ -103,13 +103,9 @@ a {
 
 .description {
 	display: block;
-	//width: 200px;
-	//margin: 50px;
-	//border: 1px solid black;
 }
 
 img {
-	//border: 1px solid black;
 	display: table;
 	border-radius: 5px;
 	width: 50%;
@@ -175,5 +171,30 @@ li.rankNo {
 	clear: both;
 	display: table;
 }
-
-
+.button-styling {
+	width: 75%;
+	margin-top: 2%;
+	padding: 0%;
+	margin-left: 10%;
+}
+.park_section {
+	min-width: 33%;
+	max-width: 33%;
+}
+.park-rating {
+	text-align: center;
+	padding-top: 1%;
+}
+.park-heading {
+	border-bottom: 2px solid white;
+}
+.park-address {
+	padding: 1% 0% 0% 3%;
+}
+.park-features {
+	
+}
+.hidden {
+	display: none;
+	visibility: hidden;
+}
