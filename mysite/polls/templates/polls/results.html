@@ -1,0 +1,26 @@
+<!DOCTYPE>
+<html>
+<head></head>
+<body>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+    
+    <input id="back" type="button" value="Back to Main" style="display: inline-block;">
+    
+	<h1>{{ question.question_text }}</h1>
+
+	<ul>
+	{% for choice in question.choice_set.all %}
+		<li>{{ choice.choice_text }} -- {{ choice.votes }} votes</li>
+	{% endfor %}
+	</ul>
+	
+	<a href="{% url 'polls:detail' question.id %}" id='vote'>Vote again?</a>
+
+    <script>
+        document.querySelector('#back').onclick = function(e) {
+            window.location.pathname = '';
+        };
+    </script>
+</body>
+</html>

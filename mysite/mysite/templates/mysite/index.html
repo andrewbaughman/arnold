@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset-"utf-8"></head>
+<body>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'mysite/style.css' %}">
+	<div class="content">
+		<h1>Inspirational Heading</h1>
+    	<div class="contentBody">
+		<ul class="urls">
+			<li class="urls" style="margin-top: 10px;" onclick="location.href='{% url 'polls:index' %}';">Polls</li>
+    	    <li class="urls" style="margin-top: 10px;" onclick="location.href='{% url 'chat:index' %}';"><a href="{% url 'chat:index' %}">Chat</a></li>
+    	    <li class="urls" style="margin-top: 10px;" onclick="location.href='{% url 'pic:index' %}';"><a href="{% url 'pic:index' %}">Pic</a></li>
+    	    <li class="urls" style="margin-top: 10px;" onclick="location.href='{% url 'RJcount:index' %}';"><a href="{% url 'RJcount:index' %}">RJcount</a></li>
+    	    <li class="urls" style="margin-top: 10px;" onclick="location.href='{% url 'parks:index' %}';"><a href="{% url 'parks:index' %}">Parks</a></li>
+		</ul>
+		</div>
+	</div>
+</body>
+</html>
+

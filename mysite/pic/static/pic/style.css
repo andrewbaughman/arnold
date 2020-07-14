@@ -1,0 +1,13 @@
+body { 
+    background: #312f44 url("images/mountain.jpg") no-repeat;
+    background-size: 100%;
+}
+
+p {
+    font-family: cursive;
+    color: white;
+}
+
+p.count {
+	color: black;
+}

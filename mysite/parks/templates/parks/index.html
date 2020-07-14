@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset-"utf-8"></head>
+<body>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'mysite/style.css' %}">
+	<input id="back" type="button" value="Back to Main">
+	<div class="content">
+		<h1>List of Parks</h1>
+    	<div class="contentBody">
+			<ul class="names">
+				<li class="names">Park1</li>
+    	    	<li class="names">Park2</li>
+    	    	<li class="names">Park3</li>
+    	    	<li class="names">Park4</li>
+			</ul>
+			<div class="parkinfo">
+				<p id='rank'>Rank: 2</p>
+				<p class='description'>A description of the park. <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempus, odio non malesuada maximus, arcu risus eleifend elit, id auctor ante lacus eget sapien. Maecenas leo nibh, elementum at felis in, porta dictum tellus. Donec felis leo, aliquet sed egestas in, ultricies non enim. Aliquam erat volutpat. </p>
+				<div class = "row">
+					<div class="column"><img src="{% static 'mysite/park1.jpg' %}" style="width: 100%;"></div>
+					<div class="column"><img src="{% static 'mysite/park2.jpg' %}" style="width: 100%;"></div>
+				</div>
+				<div class="rankTime">
+					<p class='rankDesc'>How would you rank it?</p>
+					<ul class="rankRow">
+						<li class='rankCol'>1 Quite Bad</li>
+						<li class='rankCol'>2 Kinda bad</li>
+						<li class='rankCol'>3 'Lil Good</li>
+						<li class='rankCol'>4 Fantastic</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script>
+        document.querySelector('#back').onclick = function(e) {
+            window.location.pathname = '';
+        };
+    </script>
+</body>
+</html>

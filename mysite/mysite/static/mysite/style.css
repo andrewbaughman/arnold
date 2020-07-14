@@ -1,0 +1,179 @@
+body { 
+    background: #312f44 url("images/mountain.jpg") no-repeat;
+    background-size: 100%;
+}
+
+#back {
+	display: block;
+	float: left;
+}
+
+.content {
+	display: block;
+	width: 70%;
+	//border: 1px solid black;
+	margin: auto;
+	margin-top: 20px;
+}
+
+h1 {
+    display: block;
+    text-align: center;
+    background-color: cadetblue;
+    width: 90%;
+	//border: 1px solid black;
+	margin: auto;
+    font-family: cursive;
+    border-radius: 10px;
+}
+
+.contentBody {
+    background: cadetblue;
+    background-size: 100%;
+	border-radius: 10px;
+    width: 96%;
+    padding: 20px;
+    display: block;
+    margin: auto;
+	margin-top: 20px;
+	height: 700px;
+	//border: 1px solid black;
+}
+
+ul.names {
+    margin:0px;
+	float: left;
+	width: 40px;
+	//padding: 0px;
+	//border: 1px solid black;
+    list-style-type: none;
+	display: inline-block;
+	height: 90%;
+}
+
+li.names {
+    border-radius: 5px;
+    background-color: white;
+    text-align: center;
+    margin: 5px;
+    width: 60px;
+	margin-left: -70%;
+}
+
+ul.urls {
+    margin-left: 10%;
+    margin-right: 10%;
+	width: 70%;
+	//padding: 0px;
+	//border: 1px solid black;
+    list-style-type: none;
+	display: inline-block;
+	height: 90%;
+}
+
+li.urls {
+	color: black;
+	cursor: pointer;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+	padding-top: 10px;
+    width: 100%;
+	height: 50px;
+	font-size: 35px;
+	margin:auto;
+	display: block;
+	
+}
+
+#images {
+	display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    font-family: cursive;
+}
+
+.parkinfo {
+	width: 92%;
+	float: right;
+	//border: 1px solid black;
+}
+
+.description {
+	display: block;
+	//width: 200px;
+	//margin: 50px;
+	//border: 1px solid black;
+}
+
+img {
+	//border: 1px solid black;
+	display: table;
+	border-radius: 5px;
+	width: 50%;
+	height: auto;
+}
+
+li.rankNo {
+	//display: inline;
+	border: 1px solid black;
+	width: 50px;
+}
+
+.rankTime {
+	margin-top: 10px;
+	border-radius: 5px;
+	background-color: coral;
+	width: 50%;
+	height: 70px;
+	padding: 15px;
+}
+
+.rankDesc {
+	//border: 1px solid black;
+	font-size: 15;
+	width: 200px;
+	color: black;
+	margin: auto;
+}
+
+.column {
+	float: left;
+	width: 50%;
+	padding: 0px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.rankCol {
+	float: left;
+	width: 120px;
+	text-align: center;
+	padding: 0px;
+	border-radius: 5px;
+	margin: 2px;
+	background-color: aliceblue;
+	list-style-type: none;
+	height: 25px;
+	padding-top: 7px;
+}
+
+.rankCol:hover {
+	background-color: aqua;
+}
+
+/* Clear floats after image containers */
+.rankRow::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+

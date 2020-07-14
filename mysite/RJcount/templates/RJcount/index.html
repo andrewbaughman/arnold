@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset-"utf-8"></head>
+<body>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'pic/style.css' %}">
+    
+    <input id="back" type="button" value="Back to Main">
+    
+    <p class="count">count: </p><p class="count" id="RJ"></p>
+	<input id="plus" type="button" value="+">
+	<input id="minus" type="button" value="-">
+	<input id="clearRJ" type="button" value="Clear">
+	
+	<h1><time id="time">00:00:00</time></h1>
+	<button id="start">start</button>
+	<button id="stop">stop</button>
+	<button id="clear">clear</button>
+	
+	<script>
+        document.querySelector('#back').onclick = function(e) {
+            window.location.pathname = '';
+        };
+		
+		count = {{today.RJcount}};
+		count = count - 1;
+		count = count + 1;
+		document.getElementById("RJ").innerHTML = localStorage.getItem("RJcount");
+		
+		document.querySelector('#plus').onclick = function(e) {
+			count = count + 1;
+			if (typeof(Storage) !== "undefined") {
+				// Store
+				localStorage.setItem("RJcount", count);
+				// Retrieve
+				document.getElementById("RJ").innerHTML = localStorage.getItem("RJcount");
+			} else {
+				document.getElementById("RJ").innerHTML = "Sorry, your browser does not support Web Storage...";
+			}
+        };
+		document.querySelector('#minus').onclick = function(e) {
+			count = count - 1;
+			if (typeof(Storage) !== "undefined") {
+				// Store
+				localStorage.setItem("RJcount", count);
+				// Retrieve
+				document.getElementById("RJ").innerHTML = localStorage.getItem("RJcount");
+			} else {
+				document.getElementById("RJ").innerHTML = "Sorry, your browser does not support Web Storage...";
+			}
+        };
+		document.querySelector('#clearRJ').onclick = function(e) {
+			count = 0;
+			localStorage.setItem("RJcount", count);
+				
+			document.getElementById("RJ").innerHTML = localStorage.getItem("RJcount");
+        };
+		
+		// Timer
+		
+		
+		var h1 = document.getElementsByTagName('h1')[0],
+			start = document.getElementById('start'),
+			stop = document.getElementById('stop'),
+			clear = document.getElementById('clear');
+		seconds = {{today.RJseconds}};
+		minutes = {{today.RJminutes}};
+		hours = {{today.RJhours}};
+		
+		hours = localStorage.getItem("RJhours");
+		minutes = localStorage.getItem("RJminutes");
+		seconds = localStorage.getItem("RJseconds");
+		
+		function add() {
+			seconds++;
+			if (seconds >= 60) {
+				seconds = 0;
+				minutes++;
+				if (minutes >= 60) {
+					minutes = 0;
+					hours++;
+				}
+			}
+			
+			localStorage.setItem("RJseconds", seconds);
+			seconds = localStorage.getItem("RJseconds");
+			localStorage.setItem("RJminutes", minutes);
+			minutes = localStorage.getItem("RJminutes");
+			localStorage.setItem("RJhours", hours);
+			hours = localStorage.getItem("RJhours");
+			
+			h1.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+			
+			
+			
+			timer();
+		}
+		function timer() {
+			t = setTimeout(add, 1000);
+			
+		}
+		//timer();
+		
+		
+		/* Start button */
+		start.onclick = timer;
+		
+		/* Stop button */
+		stop.onclick = function() {
+			clearTimeout(t);
+		}
+		
+		/* Clear button */
+		clear.onclick = function() {
+			h1.textContent = "00:00:00";
+			seconds = 0; minutes = 0; hours = 0;
+			localStorage.setItem("RJseconds", seconds);
+			localStorage.setItem("RJminutes", minutes);
+			localStorage.setItem("RJhours", hours);			
+		}
+		
+	</script>
+	
+	
+	
+	
+	
+</body>
+</html>

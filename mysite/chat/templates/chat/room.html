@@ -1,0 +1,82 @@
+<!-- chat/templates/chat/room.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Chat Room</title>
+</head>
+<body>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'chat/style.css' %}">
+    
+    <input id="back" type="button" value="Back to Main">
+    
+    <div id="body">
+        <h1 id="roomname" size="80%">Room Name</h1>
+        <div id="logcontainer">
+			<p id="chat-log"></p><br>
+		</div>
+		<!--<textarea id="chat-log" cols="100" rows="20"></textarea><br>
+        -->
+		<input id="chat-message-input" type="text" size="100"><br>
+        <input id="chat-message-submit" type="button" value="Send">
+        {{ room_name|json_script:"room-name" }}
+    </div>
+        
+    <script>
+        
+        const roomName = JSON.parse(document.getElementById('room-name').textContent);
+        
+        //for room name
+        document.getElementById('roomname').innerHTML = roomName;
+        
+        const chatSocket = new WebSocket(
+            'ws://'
+            + window.location.host
+            + '/ws/chat/'
+            + roomName
+            + '/'
+        );
+ 
+		//
+		//	sudo docker run -p 6379:6379 -d redis:5
+		//	python3 -m pip install channels_redis
+		//
+		//
+		//
+		
+		
+        chatSocket.onmessage = function(e) {
+                const data = JSON.parse(e.data);
+                msg = data.message;
+                document.getElementById('chat-log').innerHTML += msg;
+                msg = '<br>';
+                document.getElementById('chat-log').innerHTML += msg;
+            };  
+
+        chatSocket.onclose = function(e) {
+            console.error('Chat socket closed unexpectedly');
+        };
+
+        document.querySelector('#chat-message-input').focus();
+        document.querySelector('#chat-message-input').onkeyup = function(e) {
+            if (e.keyCode === 13) {  // enter, return
+                document.querySelector('#chat-message-submit').click();
+            }
+        };
+
+        document.querySelector('#chat-message-submit').onclick = function(e) {
+            const messageInputDom = document.querySelector('#chat-message-input');
+            const message = messageInputDom.value;
+            chatSocket.send(JSON.stringify({
+                'message': message
+            }));
+            messageInputDom.value = '';
+        };
+    
+        document.querySelector('#back').onclick = function(e) {
+            window.location.pathname = '';
+        };
+    </script>
+</body>
+</html>

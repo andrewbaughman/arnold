@@ -1,0 +1,68 @@
+li {
+	color: darkblue;
+    background-color: darkturquoise;
+    width: 200px;
+    border-radius: 5px;
+    padding: 10px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+#vote {
+    display: block;
+    margin: auto;
+    background-color: #f3f2f1;
+    border-radius: 5px;
+    width: 100px;
+    padding: 5px;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    display: block;
+    margin-left: 42%;
+}
+
+body {
+	background: white url("images/sky.png") repeat;
+    background-size: 100%;
+}
+
+form {
+	color: darkblue;
+    text-decoration: none;
+    background-color: darkturquoise;
+    width: 200px;
+    border-radius: 10px;
+    margin: auto;
+    padding: 10px;
+    display: block;
+}
+
+input[type=submit] {
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+}
+
+h1 {
+    font-family: cursive;
+    display: block;
+    background-color: darkturquoise;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    text-align: center;
+    width: 500px;
+}
+
+button {
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+}
