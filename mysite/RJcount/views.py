@@ -7,11 +7,9 @@ from django.utils import timezone
 from datetime import date
 
 
-from .models import RJstats
 
 # Create your views here.
 
 def index(request):
-	today = RJstats.objects.get(RJcount=3)
-	return render(request, 'RJcount/index.html', {'today':today})
+	return render(request, 'RJcount/index.html')
 
