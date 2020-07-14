@@ -6,138 +6,138 @@ $(document).ready(function(){
 function showhide(){
 	$('#roseland-btn').on('click', function(){
 		console.log('roseland'); 
-		if(!$('#info_panel').find('#sample_suggestion').hasClass('hidden')) 
+		if(!$('.info_section').find('#sample_suggestion').hasClass('hidden')) 
 			{
-				$('#info_panel').find('#sample_suggestion').addClass('hidden');
+				$('.info_section').find('#sample_suggestion').addClass('hidden');
 			}
-		if($('#info_panel').find('#roseland-btn').hasClass('hidden')) 
+		if($('.info_section').find('#roseland').hasClass('hidden')) 
 			{
-				$('#info_panel').find('#roseland-btn').removeClass('hidden');
+				$('.info_section').find('#roseland').removeClass('hidden');
 				console.log('unhide');
 			}
-		if(!$('#info_panel').find('#garver-btn').hasClass('hidden')) 
+		if(!$('.info_section').find('#garver').hasClass('hidden')) 
 			{
-				$('#info_panel').find('#garver-btn').addClass('hidden');
+				$('.info_section').find('#garver').addClass('hidden');
 			}
-		if(!$('#info_panel').find('#recreation-btn').hasClass('hidden')) 
+		if(!$('.info_section').find('#recreation').hasClass('hidden')) 
 			{
-				$('#info_panel').find('#recreation-btn').addClass('hidden');
+				$('.info_section').find('#recreation').addClass('hidden');
 			}
-		if(!$('#info_panel').find('#eastend-btn').hasClass('hidden')) 
+		if(!$('.info_section').find('#eastend').hasClass('hidden')) 
 			{
-				$('#info_panel').find('#eastend-btn').addClass('hidden');
+				$('.info_section').find('#eastend').addClass('hidden');
 			}
-		if(!$('#info_panel').find('#butterfly-btn').hasClass('hidden')) 
+		if(!$('.info_section').find('#butterfly').hasClass('hidden')) 
 			{
-				$('#info_panel').find('#butterfly-btn').addClass('hidden');
+				$('.info_section').find('#butterfly').addClass('hidden');
 			}
 	});
 	$('#garver-btn').on('click', function(){
 		console.log('garver'); 
-		if(!$('#info_panel').find('#sample_suggestion').hasClass('hidden')) 
+		if(!$('.info_section').find('#sample_suggestion').hasClass('hidden')) 
 			{
-				$('#info_panel').find('#sample_suggestion').addClass('hidden');
+				$('.info_section').find('#sample_suggestion').addClass('hidden');
 			}
-		if(!$('#info_panel').find('#roseland-btn').hasClass('hidden')) 
+		if(!$('.info_section').find('#roseland').hasClass('hidden')) 
 			{
-				$('#info_panel').find('#roseland-btn').addClass('hidden');
+				$('.info_section').find('#roseland').addClass('hidden');
 			}
-		if($('#info_panel').find('#garver-btn').hasClass('hidden')) 
+		if($('.info_section').find('#garver').hasClass('hidden')) 
 			{
-				$('#info_panel').find('#garver-btn').removeClass('hidden');
+				$('.info_section').find('#garver').removeClass('hidden');
 			}
-		if(!$('#info_panel').find('#recreation-btn').hasClass('hidden')) 
+		if(!$('.info_section').find('#recreation').hasClass('hidden')) 
 			{
-				$('#info_panel').find('#recreation-btn').addClass('hidden');
+				$('.info_section').find('#recreation').addClass('hidden');
 			}
-		if(!$('#info_panel').find('#eastend-btn').hasClass('hidden')) 
+		if(!$('.info_section').find('#eastend').hasClass('hidden')) 
 			{
-				$('#info_panel').find('#eastend-btn').addClass('hidden');
+				$('.info_section').find('#eastend').addClass('hidden');
 			}
-		if(!$('#info_panel').find('#butterfly-btn').hasClass('hidden')) 
+		if(!$('.info_section').find('#butterfly').hasClass('hidden')) 
 			{
-				$('#info_panel').find('#butterfly-btn').addClass('hidden');
+				$('.info_section').find('#butterfly').addClass('hidden');
 			}
 	});
 	$('#recreation-btn').on('click', function(){
 		console.log('recreation'); 
-		if(!$('#info_panel').find('#sample_suggestion').hasClass('hidden')) 
+		if(!$('.info_section').find('#sample_suggestion').hasClass('hidden')) 
 			{
-				$('#info_panel').find('#sample_suggestion').addClass('hidden');
+				$('.info_section').find('#sample_suggestion').addClass('hidden');
 			}
-		if(!$('#info_panel').find('#roseland-btn').hasClass('hidden')) 
+		if(!$('.info_section').find('#roseland').hasClass('hidden')) 
 			{
-				$('#info_panel').find('#roseland-btn').addClass('hidden');
+				$('.info_section').find('#roseland').addClass('hidden');
 			}
-		if(!$('#info_panel').find('#garver-btn').hasClass('hidden')) 
+		if(!$('.info_section').find('#garven').hasClass('hidden')) 
 			{
-				$('#info_panel').find('#garver-btn').addClass('hidden');
+				$('.info_section').find('#garver').addClass('hidden');
 			}
-		if($('#info_panel').find('#recreation-btn').hasClass('hidden')) 
+		if($('.info_section').find('#recreation').hasClass('hidden')) 
 			{
-				$('#info_panel').find('#recreation-btn').removeClass('hidden');
+				$('.info_section').find('#recreation').removeClass('hidden');
 			}
-		if(!$('#info_panel').find('#eastend-btn').hasClass('hidden')) 
+		if(!$('.info_section').find('#eastend').hasClass('hidden')) 
 			{
-				$('#info_panel').find('#eastend-btn').addClass('hidden');
+				$('.info_section').find('#eastend').addClass('hidden');
 			}
-		if(!$('#info_panel').find('#butterfly-btn').hasClass('hidden')) 
+		if(!$('.info_section').find('#butterfly').hasClass('hidden')) 
 			{
-				$('#info_panel').find('#butterfly-btn').addClass('hidden');
+				$('.info_section').find('#butterfly').addClass('hidden');
 			}
 	});
 	$('#eastend-btn').on('click', function(){
 		console.log('east end'); 
-		if(!$('#info_panel').find('#sample_suggestion').hasClass('hidden')) 
+		if(!$('.info_section').find('#sample_suggestion').hasClass('hidden')) 
 			{
-				$('#info_panel').find('#sample_suggestion').addClass('hidden');
+				$('.info_section').find('#sample_suggestion').addClass('hidden');
 			}
-		if(!$('#info_panel').find('#roseland-btn').hasClass('hidden')) 
+		if(!$('.info_section').find('#roseland').hasClass('hidden')) 
 			{
-				$('#info_panel').find('#roseland-btn').addClass('hidden');
+				$('.info_section').find('#roseland').addClass('hidden');
 			}
-		if(!$('#info_panel').find('#garver-btn').hasClass('hidden')) 
+		if(!$('.info_section').find('#garver').hasClass('hidden')) 
 			{
-				$('#info_panel').find('#garver-btn').addClass('hidden');
+				$('.info_section').find('#garver').addClass('hidden');
 			}
-		if(!$('#info_panel').find('#recreation-btn').hasClass('hidden')) 
+		if(!$('.info_section').find('#recreation').hasClass('hidden')) 
 			{
-				$('#info_panel').find('#recreation-btn').addClass('hidden');
+				$('.info_section').find('#recreation').addClass('hidden');
 			}
-		if($('#info_panel').find('#eastend-btn').hasClass('hidden')) 
+		if($('.info_section').find('#eastend').hasClass('hidden')) 
 			{
-				$('#info_panel').find('#eastend-btn').removeClass('hidden');
+				$('.info_section').find('#eastend').removeClass('hidden');
 			}
-		if(!$('#info_panel').find('#butterfly-btn').hasClass('hidden')) 
+		if(!$('.info_section').find('#butterfly').hasClass('hidden')) 
 			{
-				$('#info_panel').find('#butterfly-btn').addClass('hidden');
+				$('.info_section').find('#butterfly').addClass('hidden');
 			}
 	});
 	$('#butterfly-btn').on('click', function(){
 		console.log('butterfly'); 
-		if(!$('#info_panel').find('#sample_suggestion').hasClass('hidden')) 
+		if(!$('.info_section').find('#sample_suggestion').hasClass('hidden')) 
 			{
-				$('#info_panel').find('#sample_suggestion').addClass('hidden');
+				$('.info_section').find('#sample_suggestion').addClass('hidden');
 			}
-		if(!$('#info_panel').find('#roseland-btn').hasClass('hidden')) 
+		if(!$('.info_section').find('#roseland').hasClass('hidden')) 
 			{
-				$('#info_panel').find('#roseland-btn').addClass('hidden');
+				$('.info_section').find('#roseland').addClass('hidden');
 			}
-		if(!$('#info_panel').find('#garver-btn').hasClass('hidden')) 
+		if(!$('.info_section').find('#garver').hasClass('hidden')) 
 			{
-				$('#info_panel').find('#garver-btn').addClass('hidden');
+				$('.info_section').find('#garver').addClass('hidden');
 			}
-		if(!$('#info_panel').find('#recreation-btn').hasClass('hidden')) 
+		if(!$('.info_section').find('#recreation').hasClass('hidden')) 
 			{
-				$('#info_panel').find('#recreation-btn').addClass('hidden');
+				$('.info_section').find('#recreation').addClass('hidden');
 			}
-		if(!$('#info_panel').find('#eastend-btn').hasClass('hidden')) 
+		if(!$('.info_section').find('#eastend').hasClass('hidden')) 
 			{
-				$('#info_panel').find('#eastend-btn').addClass('hidden');
+				$('.info_section').find('#eastend').addClass('hidden');
 			}
-		if($('#info_panel').find('#butterfly-btn').hasClass('hidden')) 
+		if($('.info_section').find('#butterfly').hasClass('hidden')) 
 			{
-				$('#info_panel').find('#butterfly-btn').removeClass('hidden');
+				$('.info_section').find('#butterfly').removeClass('hidden');
 			}
 	});
 		
