@@ -1,6 +1,18 @@
 body { 
-    background: #312f44 url("images/mountain.jpg") no-repeat;
+    background: #312f44 url("images/sparkles.jpg") no-repeat;
     background-size: 100%;
+}
+
+.arnold {
+	display: inline;
+	height: 200px;
+	width: auto;
+}
+
+.arnold-faces {
+	width: 47%;
+	margin: auto;
+	//border: 1px solid black;
 }
 
 #back {
@@ -19,7 +31,7 @@ body {
 h1 {
     display: block;
     text-align: center;
-    background-color: cadetblue;
+    background-color: #5f18f6;
     width: 90%;
 	//border: 1px solid black;
 	margin: auto;
@@ -28,7 +40,7 @@ h1 {
 }
 
 .contentBody {
-    background: cadetblue;
+    background: #5f18f6;
     background-size: 100%;
 	border-radius: 10px;
     width: 96%;
@@ -68,7 +80,7 @@ ul.urls {
 	//border: 1px solid black;
     list-style-type: none;
 	display: inline-block;
-	height: 90%;
+	height: 55%;
 }
 
 li.urls {
