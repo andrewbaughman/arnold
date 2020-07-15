@@ -12,7 +12,6 @@ body {
 .arnold-faces {
 	width: 47%;
 	margin: auto;
-	//border: 1px solid black;
 }
 
 #back {
@@ -23,7 +22,6 @@ body {
 .content {
 	display: block;
 	width: 70%;
-	//border: 1px solid black;
 	margin: auto;
 	margin-top: 20px;
 }
@@ -33,7 +31,6 @@ h1 {
     text-align: center;
     background-color: #5f18f6;
     width: 90%;
-	//border: 1px solid black;
 	margin: auto;
     font-family: cursive;
     border-radius: 10px;
@@ -49,15 +46,12 @@ h1 {
     margin: auto;
 	margin-top: 20px;
 	height: 700px;
-	//border: 1px solid black;
 }
 
 ul.names {
     margin:0px;
 	float: left;
 	width: 40px;
-	//padding: 0px;
-	//border: 1px solid black;
     list-style-type: none;
 	display: inline-block;
 	height: 90%;
@@ -76,8 +70,6 @@ ul.urls {
     margin-left: 10%;
     margin-right: 10%;
 	width: 70%;
-	//padding: 0px;
-	//border: 1px solid black;
     list-style-type: none;
 	display: inline-block;
 	height: 55%;
@@ -97,6 +89,9 @@ li.urls {
 	display: block;
 	
 }
+li.urls:hover {
+	background-color: #97f9e9;
+}
 
 #images {
 	display: inline-block;
@@ -110,7 +105,6 @@ a {
 .parkinfo {
 	width: 92%;
 	float: right;
-	//border: 1px solid black;
 }
 
 .description {
@@ -125,7 +119,6 @@ img {
 }
 
 li.rankNo {
-	//display: inline;
 	border: 1px solid black;
 	width: 50px;
 }
@@ -140,7 +133,6 @@ li.rankNo {
 }
 
 .rankDesc {
-	//border: 1px solid black;
 	font-size: 15;
 	width: 200px;
 	color: black;
@@ -210,3 +202,25 @@ li.rankNo {
 	display: none;
 	visibility: hidden;
 }
+.swirlhover {
+	text-align: center;
+	background: radial-gradient(aqua, yellow, lime, crimson);
+	background-size: 200% auto;
+	color: #000;
+	background-clip: text;
+	text-fill-color: transparent;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: shine 2s linear infinite;
+}
+
+@keyframes shine {
+		from {background-position: 0% center;}
+		to {background-position: 200% center;}
+	}
+
+@keyframes swirly {
+   0%  {background: radial-gradient(red, blue, green, red);}
+  25%  {background: radial-gradient(white, red, green, red);}
+  50%  {background: radial-gradient(purple, white, green, red);}
+  100% {background: radial-gradient(blue, purple, green, red);}

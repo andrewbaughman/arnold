@@ -5,7 +5,6 @@ $(document).ready(function(){
 
 function showhide(){
 	$('#roseland-btn').on('click', function(){
-		console.log('roseland'); 
 		if(!$('.info_section').find('#sample_suggestion').hasClass('hidden')) 
 			{
 				$('.info_section').find('#sample_suggestion').addClass('hidden');
@@ -13,7 +12,6 @@ function showhide(){
 		if($('.info_section').find('#roseland').hasClass('hidden')) 
 			{
 				$('.info_section').find('#roseland').removeClass('hidden');
-				console.log('unhide');
 			}
 		if(!$('.info_section').find('#garver').hasClass('hidden')) 
 			{
@@ -33,7 +31,6 @@ function showhide(){
 			}
 	});
 	$('#garver-btn').on('click', function(){
-		console.log('garver'); 
 		if(!$('.info_section').find('#sample_suggestion').hasClass('hidden')) 
 			{
 				$('.info_section').find('#sample_suggestion').addClass('hidden');
@@ -60,7 +57,6 @@ function showhide(){
 			}
 	});
 	$('#recreation-btn').on('click', function(){
-		console.log('recreation'); 
 		if(!$('.info_section').find('#sample_suggestion').hasClass('hidden')) 
 			{
 				$('.info_section').find('#sample_suggestion').addClass('hidden');
@@ -87,7 +83,6 @@ function showhide(){
 			}
 	});
 	$('#eastend-btn').on('click', function(){
-		console.log('east end'); 
 		if(!$('.info_section').find('#sample_suggestion').hasClass('hidden')) 
 			{
 				$('.info_section').find('#sample_suggestion').addClass('hidden');
@@ -114,7 +109,6 @@ function showhide(){
 			}
 	});
 	$('#butterfly-btn').on('click', function(){
-		console.log('butterfly'); 
 		if(!$('.info_section').find('#sample_suggestion').hasClass('hidden')) 
 			{
 				$('.info_section').find('#sample_suggestion').addClass('hidden');
