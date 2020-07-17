@@ -16,6 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from mysite import views
+#from api.v1.router import api_urlpatterns as api_v1
+from django.contrib.staticfiles.templatetags.staticfiles import static
+from django.views.generic import RedirectView
+from django.conf.urls import include, url
+from django.contrib import admin
+from django.urls import path
+
 
 from parks.api.v1.router import api_urlpatterns as parks_api_v1
 
