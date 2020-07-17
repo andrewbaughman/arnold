@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset-"utf-8"></head>
+	<title>
+		Park List	
+	</title>
+<body>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'mysite/style.css' %}">
+{% block script %}
+	
+	<script src="{% static 'jquery/jquery-3.3.1.min.js' %}"></script>
+	<script src="{% static 'jquery/jquery.validate.min.js' %}"></script>
+	<script src="{% static 'jquery/jquery.autocomplete.js' %}"></script>
+	<script src="{% static 'jquery/waitMe/waitMe.js' %}"></script>
+	<script src="{% static 'jquery-ui/jquery-ui.min.js' %}"></script>
+	
+	<script type="text/javascript" src="{% static '/mysite/parkwidget.js' %}"></script>
+{% endblock %}
+	<input id="back" type="button" value="Back to Main">
+	<div class="content">
+		<h1>List of Parks</h1>
+	</div>
+		<div class="content-container" style="background-color: cadetblue;height: 85vh;border-radius: 10px;width: 95vw;margin: 5vh; display: inline-flex;">
+			<div class="button_list" style="float: left;border-right: 1px solid white;min-width: 10%;min-height: 100%;">
+				<button class="button-styling" id="roseland-btn">Roseland</button>
+				<button class="button-styling" id="garver-btn">Garver</button>
+				<button class="button-styling" id="recreation-btn">Recreation</button>
+				<button class="button-styling" id="eastend-btn">East End</button>
+				<button class="button-styling" id="butterfly-btn">Butterfly</button>
+			</div>
+			<div class="info_panel" style="max-width: 80vw;min-width:80vw;">
+				<div class="info_section" style="height: 100%; width: 100%;">
+					<div id="roseland" class="">
+						<div>
+							<div class="park-heading">
+								<h2 style="text-align:center;">Roseland Park</h2>
+								<text>Average Rating: </text><rating>{rating}</rating>
+								
+							</div>
+							<div class="park-description" style="display:flex;">
+								<div class="park-address park_section">
+									<text>319 E South St, Bryan, OH 43506</text>
+									<div class="park-map">
+										<img src="{% static 'mysite/roselandpark.png' %}" style="width: 60%; margin-top: 1%;">
+									</div>
+								</div>
+								<div class="park-features park_section">
+									<ul>
+										<li>Cool Bridge</li>
+										<li>Neat Sign</li>
+										<li>Basketball Court</li>
+										<li>Trees</li>
+									</ul>
+								</div>
+								<div class="park-rating park_section">
+									<button id="roseland-vote-1" class="vote-button"> 1 </button>(Bad)<br>
+									<button id="roseland-vote-2"class="vote-button"> 2 </button><br>
+									<button id="roseland-vote-3"class="vote-button"> 3 </button><br>
+									<button id="roseland-vote-4"class="vote-button"> 4 </button><br>
+									<button id="roseland-vote-5"class="vote-button"> 5 </button>(Amazing)
+								</div>
+							</div>
+							<div class="park-pictures" >
+								{LOOK AT ALL THESE PICTURES}
+							</div>
+						</div>
+					</div>
