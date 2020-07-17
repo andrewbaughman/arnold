@@ -17,8 +17,12 @@ from django.contrib import admin
 from django.urls import include, path
 from mysite import views
 
+from parks.api.v1.router import api_urlpatterns as parks_api_v1
+
 urlpatterns = [
     path('', views.index, name='index'),
+    path('api/v1/parks/', include(parks_api_v1)),
+
 	path(r'polls/', include('polls.urls', namespace = "polls")),
 	path('admin/', admin.site.urls),
 	path(r'chat/', include('chat.urls', namespace="chat")),

@@ -39,6 +39,7 @@ ALLOWED_HOSTS = [
 
 INSTALLED_APPS = [
     'chat',
+    'rest_framework',
 	'parks.apps.ParksConfig',
 	'RJcount.apps.RjcountConfig',
     'mysite.apps.MysiteConfig',
