@@ -220,6 +220,18 @@ li.rankNo {
 	display: none;
 	visibility: hidden;
 }
+li > a {
+	background: aquamarine;
+	border-radius: 100%;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+.url_link:hover {
+	background-size: 200% auto;
+	background: radial-gradient(aqua, yellow, lime, crimson);
+	background-clip: text;
+	animation: swirly 1s cubic-bezier(.59,0,.43,1.15) infinite;
+}
 .swirlhover {
 	text-align: center;
 	background: radial-gradient(aqua, yellow, lime, crimson);

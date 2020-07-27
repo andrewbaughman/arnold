@@ -44,12 +44,14 @@ function getRoselandRating(){
 		complete: function(data){
 			//console.log(data.responseJSON);
 			if(data.responseJSON == undefined) {
-				console.log('vote one undefined');
+				console.log('getRoselandRating undefined');
 			} 
 			else if(data.responseJSON['status'] == 'OK') {
-				console.log('vote one success');
-			} else if (data.responseJSON['status'] == 'ERROR') {
-				console.log('vote one fail');
+				var parkrating = data.responseJSON['park_rating'];
+				$('#roseland-btn').text(function(){$('#roseland-rating').html(parkrating);});
+			} 
+			else if (data.responseJSON['status'] == 'ERROR') {
+				console.log('getRoselandRating fail');
 
 			}
 		}
@@ -82,8 +84,7 @@ function showhide(){
 			{
 				$('.info_section').find('#butterfly').addClass('hidden');
 			}
-		var rating = getRoselandRating();
-		$('#roseland-btn').find('.primarygrouptype').html(rating);
+		getRoselandRating();
 
 	});
 	$('#garver-btn').on('click', function(){
